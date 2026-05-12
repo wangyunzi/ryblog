@@ -32,7 +32,7 @@ jobs:
 
     - name: Sync _pages folder
       run: |
-        rsync -av --delete myob/日记本/blog/pages/ ryblog/_pages/
+        rsync -av --delete myob/日记本/blog/pages/ryblog/_pages/
         cd ryblog
         find _pages -name "*.md" -exec sed -i -E '
           s/date: ([0-9]{4}-[0-9]{2}-[0-9]{2})T([0-9]{2}:[0-9]{2}:[0-9]{2})([+-][0-9]{2}:[0-9]{2}|)/date: \1 \2 +0800/
@@ -47,7 +47,7 @@ jobs:
 
     - name: Sync _album folder
       run: |
-        rsync -av --delete myob/日记本/blog/album/ ryblog/_album/
+        rsync -av --delete myob/日记本/blog/album/ryblog/_album/
         cd ryblog
         find _album -name "*.md" -exec sed -i -E '
           s/date: ([0-9]{4}-[0-9]{2}-[0-9]{2})T([0-9]{2}:[0-9]{2}:[0-9]{2})([+-][0-9]{2}:[0-9]{2}|)/date: \1 \2 +0800/
@@ -62,7 +62,7 @@ jobs:
 
     - name: Sync _posts folder
       run: |
-        rsync -av --delete myob/日记本/blog/posts/ ryblog/_posts/
+        rsync -av --delete myob/日记本/blog/posts/ryblog/_posts/
         cd ryblog
         find _posts -name "*.md" -exec sed -i -E '
           s/date: ([0-9]{4}-[0-9]{2}-[0-9]{2})T([0-9]{2}:[0-9]{2}:[0-9]{2})([+-][0-9]{2}:[0-9]{2}|)/date: \1 \2 +0800/
