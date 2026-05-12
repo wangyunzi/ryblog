@@ -16,7 +16,7 @@ jobs:
         script: |
           await github.rest.actions.createWorkflowDispatch({
             owner: 'wangyunzi',
-            repo: 'wangyunzi.github.io',
+            repo: 'ryblog',
             workflow_id: 'Sync_Obsidian.yml', // 确保这是你的工作流文件名
             ref: 'master' // 确保这是你的目标分支
           });
